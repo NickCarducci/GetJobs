@@ -347,8 +347,8 @@ class App extends React.Component {
             )}
           </select>
         )}
-        {this.state.jobs.map((job) => (
-          <div>
+        {this.state.jobs.map((job, i) => (
+          <div key={i}>
             {job.title}:{new Date(job.date.seconds * 1000).toLocaleDateString()}
           </div>
         ))}
